@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .valentine-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .question {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-yes {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  .btn-no {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+  .btn-yes:hover, .btn-no:hover {
+    transform: scale(1.1);
+  }
+  .special-message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff8aba;
+    display: none; /* Initially hide all messages */
+  }
+  .no-warning {
+    font-size: 14px;
+    color: red;
+  }
+</style>
+</head>
+<body>
+<img src="valentine.png" alt="Valentine" class="valentine-image">
+<div class="question">Would you be my valentine?</div>
+<div class="no-warning">(please don't press No)</div>
+<button class="btn btn-yes" onclick="showMessages()">Yes</button>
+<button class="btn btn-no" onclick="increaseYesButton()">No</button>
+<div class="special-messages">
+  <div class="special-message" id="specialMessage1">HOLA MIAMOOOOOR FELI DIAAAAAA</div>
+  <div class="special-message" id="specialMessage2">Sinceramente me da penita que estemos a tantos kilómetros de distancia hoy, y quería hacerte algo lindo así que aprendí a hacer HTMLS jeje me gustaría expresarte en este texto el amor que te tengo, pero es que es simplemente imposible porque, cuando me siento a pensar en ti, me doy cuenta lo increíblemente fuerte que me haces sentir. 
+    Antes de conocerte, me sentía tan incomprendido, escondido detrás de una máscara que marchitaba el mío espíritu, muchas veces he sentido que el destino me escupe en la cara, excepto cuando te conocí. La primera vez que salimos, me temblaban las piernas y me daba miedo soltar las palabras, pero tu energía era tan pura que al terminar el día sentí como si por fin pudiese quitármela, limpiaste la escarcha de mis mejillas y como descoronado rey forjaste una vez más la espada rota, y no me la he vuelto a poner desde entonces.
+    Imagino un lugar donde la luz alumbra siempre pura y brillante, y pienso en el cerro en el que nos sentamos a mirar cómo baja el sol, siento el aroma del bosque y pienso en tus ojos que miran directo a mi espíritu y hacen que me explote el corazón, siento la brisa en mi piel y mi alma siente la tuya, clara como el agua de un manantial, con la pureza de una estrella blanca.
+    Me siento y pienso en todo lo que he visto, en todo lo vivido y en los momentos compartidos contigo. En cada hoja amarilla y lluvia amarga, veo la promesa de un nuevo comienzo, porque como las raíces profundas que no alcanza la escarcha, nuestro amor es eterno y resistirá cualquier adversidad.
+    Y mientras estoy aquí sentado pensando en todas estas cosas, espero oír tus pasos que vuelven y tu voz suave que llama desde atrás mío, porque no hay nada que desee más que estar contigo.
+    Te amo tantísimo mi bb, eres lo mejor que me ha pasado en el año y en la vida, me has hecho tan feliz y me inspiras siempre a ser mejor sólo para ser más digno de ti, porque eres la persona más pulenta, interesante e increíble que he conocido. Ojalá nos tomemos pronto de las manos, porque extraño sentir tus manitos, tu olorcito, hacerte cariñito en el pelo y los besitos que nos damos.</div>
+  <div class="special-message" id="specialMessage3">Tea amo muchísimo miamor, y te voy a amar siempre y fuerte.</div>
+  <div class="special-message" id="specialMessage3">(momento ñoño: pon en geogebra "(x^2+y^2-1)^3 - x^2y^3=0", creo que es más preciso que 4N, pero nada supera al 4N jeje</div>
+  <div class="special-message" id="specialMessage1">(quería poner una fotito de nosotros juntos pero meodias y no tenemos fotito juntos>:C)</div>
+</div>
+
+<script>
+let yesButtonSize = 18; // Initial font size of the "Yes" button
+
+function showMessages() {
+  const messages = document.querySelectorAll('.special-message');
+  messages.forEach(message => {
+    message.style.display = 'block';
+  });
+}
+
+function increaseYesButton() {
+  yesButtonSize += 20; // Increase the font size by 2 each time "No" is clicked
+  document.querySelector('.btn-yes').style.fontSize = yesButtonSize + 'px';
+}
+</script>
+</body>
+</html>
+
+
